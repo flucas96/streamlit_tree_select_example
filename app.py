@@ -8,14 +8,12 @@ st.set_page_config(layout="wide")
 
 tree_data_small =  [
   {
-    "value": "parent 1",
-    "title": """Test <i>  <b style="color:green"> parent HTML</b><i> test""",
-    "children": [
-      {
-        "value": "parent 1-0",
-        "title": "parent 1-0",
-      }
-    ]
+    "value": True,
+    "title": """True""",
+  },
+    {
+    "value": False,
+    "title": """False""",
   }
 ]
 with st.sidebar:
@@ -41,7 +39,7 @@ with st.sidebar:
 
     maxtagcount = st.slider("Max Tag Count",min_value=0,max_value=10,value=5,step=1)
 
-    disabled = st.selectbox("Disabled",[True,False],index=1)
+    disabled = st_ant_tree(tree_data_small,key="second_tree",defaultValue=False)[0]
 
 
 

@@ -39,7 +39,9 @@ with st.sidebar:
     maxtagcount = st.slider("Max Tag Count",min_value=0,max_value=10,value=5,step=1)
   
     st.write("Disabled")
-    disabled = st_ant_tree(tree_data_small,key="second_tree",defaultValue=[False],multiple=False,treeCheckable=False)[0]
+    disabled = st_ant_tree(tree_data_small,key="second_tree",defaultValue=False,multiple=False,treeCheckable=False)
+    if disabled not in [False,True]:
+      disabled = False
 
 
 

@@ -6,6 +6,18 @@ from st_ant_tree import st_ant_tree
 st.set_page_config(layout="wide")
 
 
+tree_data_small =  [
+  {
+    "value": "parent 1",
+    "title": """Test <i>  <b style="color:green"> parent HTML</b><i> test""",
+    "children": [
+      {
+        "value": "parent 1-0",
+        "title": "parent 1-0",
+      }
+    ]
+  }
+]
 with st.sidebar:
 
   st.write("Options")
@@ -43,6 +55,8 @@ with st.sidebar:
     treeline= st.checkbox("Tree Line",value=True)
 
     status = st.selectbox("Status",["","warning","error"],index=0)
+    
+   st_ant_tree(tree_data_small,key="second_tree")
 
 
 

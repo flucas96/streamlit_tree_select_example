@@ -19,6 +19,7 @@ tree_data_small =  [
   }
 ]
 with st.sidebar:
+  st_ant_tree(tree_data_small,key="second_tree")
 
   st.write("Options")
 
@@ -56,7 +57,7 @@ with st.sidebar:
 
     status = st.selectbox("Status",["","warning","error"],index=0)
     
-   st_ant_tree(tree_data_small,key="second_tree")
+   
 
 
 

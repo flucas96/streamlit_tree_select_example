@@ -37,8 +37,9 @@ with st.sidebar:
     tree_default_expand_all = st.checkbox("Tree Default Expand All",value=False)
 
     maxtagcount = st.slider("Max Tag Count",min_value=0,max_value=10,value=5,step=1)
-
-    disabled = st_ant_tree(tree_data_small,key="second_tree",defaultValue=[False])[0]
+  
+    st.write("Disabled")
+    disabled = st_ant_tree(tree_data_small,key="second_tree",defaultValue=[False].multiple=False,treeCheckable=False)[0]
 
 
 

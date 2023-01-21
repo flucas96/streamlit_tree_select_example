@@ -42,6 +42,7 @@ with st.sidebar:
     disabled = st_ant_tree(tree_data_small,key="second_tree",defaultValue=False,multiple=False,treeCheckable=False)
     if disabled not in [False,True]:
       disabled = False
+      st.caption("Because no option is choosen the dropdown is active")
 
 
 

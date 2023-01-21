@@ -36,7 +36,7 @@ with st.sidebar:
     border = st.checkbox("Border",value=True)
 
     maxheight = st.slider("Max Height",min_value=100,max_value=1000,value=400,step=10)
-    widthdrop= st.slider("Width Dropdown (in %)",min_value=10,max_value=100,value=90,step=10)
+    widthdrop= st.slider("Width Dropdown (in %)",min_value=10,max_value=100,value=35,step=10)
 
     show_arrow = st.checkbox("Show Arrow",value=True)
     show_search = st.checkbox("Show Search",value=True)

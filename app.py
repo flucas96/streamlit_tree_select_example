@@ -60,7 +60,7 @@ with st.sidebar:
     
   with st.expander("Custom 'on change' function", expanded = True):
     st.caption("Only JavaScript Functions will work")
-    on_change = st.text_area("On Change","""console.log("Changed")""")
+    on_change = st.text_area("On Change","""alert("Value changed")""")
 
   
 st.title("Ant Design Tree Component for Streamlit")

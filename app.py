@@ -58,10 +58,10 @@ with st.sidebar:
 
     status = st.selectbox("Status",["","warning","error"],index=0)
     
-   with st.expander("Custom 'on change' function", expanded = True):
-     st.notion("Only JavaScript Functions will work")
-     on_change = st.text_area("On Change","""console.log("Changed")""")
-  
+  with st.expander("Custom 'on change' function", expanded = True):
+    st.notion("Only JavaScript Functions will work")
+    on_change = st.text_area("On Change","""console.log("Changed")""")
+
   
 st.title("Ant Design Tree Component for Streamlit")
 

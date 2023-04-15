@@ -152,5 +152,5 @@ tree_data = [
 f'''
 value = st_ant_tree(treeData=tree_data, allowClear= {allow_clear}, bordered= {border}, max_height= {maxheight}, filterTreeNode= {filter_treenode}, 
 multiple= {multiple}, placeholder= "{placeholder}", showArrow= {show_arrow}, showSearch= {show_search}, treeCheckable= {tree_checkable},
-width_dropdown= "{str(widthdrop)}%", disabled= {disabled}, maxTagCount={maxtagcount})
+width_dropdown= "{str(widthdrop)}%", disabled= {disabled}, maxTagCount={maxtagcount}, onChange={on_change})
 ''')

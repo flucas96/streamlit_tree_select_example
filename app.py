@@ -58,12 +58,11 @@ with st.sidebar:
 
     status = st.selectbox("Status",["","warning","error"],index=0)
     
-   
-
-
-
-
-
+   with st.expander("Custom 'on change' function", expanded = True):
+    st.notion("Only JavaScript Functions will work")
+    on_change = st.text_area("On Change","""console.log("Changed")""")
+  
+  
 st.title("Ant Design Tree Component for Streamlit")
 
 st.caption("A Streamlit implementation of the Ant Design Tree Component (https://ant.design/components/tree-select/).")
@@ -104,7 +103,7 @@ tree_data = [
 
 value = st_ant_tree(treeData=tree_data, allowClear= allow_clear, bordered= border, max_height= maxheight, filterTreeNode= filter_treenode, multiple= multiple,
                     placeholder= placeholder, showArrow= show_arrow, showSearch= show_search, treeCheckable= tree_checkable,
-width_dropdown= str(widthdrop) +"%", disabled= disabled, key="1", maxTagCount=maxtagcount,status=status)
+width_dropdown= str(widthdrop) +"%", disabled= disabled, key="1", maxTagCount=maxtagcount,status=status, onChange = on_change)
 
 st.write(value)
 
